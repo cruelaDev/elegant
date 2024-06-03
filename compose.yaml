@@ -1,0 +1,15 @@
+services:
+  elegant-postgres:
+    image: 'postgres:16'
+    container_name: elegant-postgres
+    ports:
+      - "5000:5432"
+    environment:
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_USER: postgres
+      POSTGRES_DB: elegant_postgres
+  elegant-redis:
+    container_name: elegant-redis
+    image: 'redis:7.2.4'
+    ports:
+      - "6379:6379"
