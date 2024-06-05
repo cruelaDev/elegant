@@ -1,0 +1,10 @@
+databaseChangeLog:
+  - include:
+      file: /create-user-table/create-user-table.yaml
+      relativeToChangelogFile: true
+  - include:
+      file: /create-role-permission-table/create-role-permission-table.yaml
+      relativeToChangelogFile: true
+  - include:
+      file: /default-role-and-permission-table/default-role-and-permission-table.yaml
+      relativeToChangelogFile: true

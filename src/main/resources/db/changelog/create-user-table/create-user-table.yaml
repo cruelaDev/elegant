@@ -1,0 +1,8 @@
+databaseChangeLog:
+  - changeSet:
+      id: create-user-table
+      author: developercruela@gmail.com
+      changes:
+        - sqlFile:
+            path: create-user-table.sql
+            relativeToChangelogFile: true
