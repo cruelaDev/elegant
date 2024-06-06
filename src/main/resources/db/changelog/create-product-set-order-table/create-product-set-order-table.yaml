@@ -1,0 +1,15 @@
+databaseChangeLog:
+  - changeSet:
+      id: create-product-set-table
+      author: developercruela@gmail.com
+      changes:
+        - sqlFile:
+            path: create-product-set-table.sql
+            relativeToChangelogFile: true
+  - changeSet:
+      id: create-order-table
+      author: developercruela@gmail.com
+      changes:
+        - sqlFile:
+            path: create-order-table.sql
+            relativeToChangelogFile: true

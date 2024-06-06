@@ -8,3 +8,12 @@ databaseChangeLog:
   - include:
       file: /default-role-and-permission-table/default-role-and-permission-table.yaml
       relativeToChangelogFile: true
+  - include:
+      file: /create-product-category-table/create-product-category-table.yaml
+      relativeToChangelogFile: true
+  - include:
+      file: /create-cart-and-wishlist-table/create-cart-and-wishlist-table.yaml
+      relativeToChangelogFile: true
+  - include:
+      file: /create-product-set-order-table/create-product-set-order-table.yaml
+      relativeToChangelogFile: true

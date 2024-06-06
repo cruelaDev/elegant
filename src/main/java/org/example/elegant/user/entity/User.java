@@ -2,8 +2,12 @@ package org.example.elegant.user.entity;
 
 import jakarta.persistence.*;
 import lombok.*;
+import org.example.elegant.cart.entity.Cart;
+import org.example.elegant.order.entity.Order;
+import org.example.elegant.rating.entity.Rating;
 import org.example.elegant.user.permission.entity.Permission;
 import org.example.elegant.user.role.entity.Role;
+import org.example.elegant.wishlist.entity.Wishlist;
 import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.annotation.LastModifiedDate;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
@@ -44,6 +48,27 @@ public class User implements UserDetails {
     private LocalDateTime created;
     @LastModifiedDate
     private LocalDateTime updated;
+
+    @OneToOne(mappedBy = "user")
+    @EqualsAndHashCode.Exclude
+    @ToString.Exclude
+    private Cart cart;
+
+    @OneToOne(mappedBy = "user")
+    @EqualsAndHashCode.Exclude
+    @ToString.Exclude
+    private Wishlist wishlist;
+
+    @OneToMany(mappedBy = "user")
+    @EqualsAndHashCode.Exclude
+    @ToString.Exclude
+    private Set<Rating> ratings;
+
+    @OneToMany(mappedBy = "user")
+    @EqualsAndHashCode.Exclude
+    @ToString.Exclude
+    private Set<Order> orders;
+
 
     @EqualsAndHashCode.Exclude
     @ToString.Exclude

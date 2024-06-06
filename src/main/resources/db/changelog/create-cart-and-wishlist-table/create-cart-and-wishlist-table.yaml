@@ -1,0 +1,8 @@
+databaseChangeLog:
+  - changeSet:
+      id: create-cart-and-wishlist-table
+      author: developercruela@gmail.com
+      changes:
+        - sqlFile:
+            path: create-cart-and-wishlist-table.sql
+            relativeToChangelogFile: true
